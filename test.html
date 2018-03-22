@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-#fonf { font-family: fonf; }
-#sans { font-family: sans-serif; }
+p { margin: 0; padding: 0; }
+.inline p { display: inline-block; }
+.fonf { font-family: fonf; }
+.mono { font-family: monospace; }
 </style>
 
-<p id="fonf">Awoooooog</p>
-<p id="sans">Awoooooog</p>
+<div class="inline">
+  <p class="fonf">Awoooooog</p>
+  <p class="mono">Awoooooog</p>
+</div>
+
+<div>
+  <p class="fonf">abcdefghijklmnopqrstuvwxyzA</p>
+  <p class="fonf">zABCDEFGHIJKLMNOPQRSTUVWXYZ0</p>
+  <p class="fonf">Z01234567890[</p>
+  <p class="fonf">0[]\{}|,./&lt;&gt;?;':"`-=~!@#$%^&amp;*()_+</p>
+</div>
 
 <script>
-var size = 2;
-var fonf = document.getElementById('fonf');
-var mono = document.getElementById('mono');
+var size = 0;
+var els = [].slice.call(document.querySelectorAll('.fonf, .mono'));
 
 function resize(n) {
   size += n;
 
-  fonf.style.fontSize = size + "em";
-  sans.style.fontSize = size + "em";
+  els.forEach(el => el.style.fontSize = size + "em");
 }
 
-resize(0);
+resize(5);
 </script>
 
 
