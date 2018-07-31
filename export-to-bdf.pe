@@ -1,5 +1,5 @@
 #!/usr/bin/env fontforge
 
-Open("fonfMedium.ttf")
+Open("fonf.sfd")
 BitmapsAvail([16,18,20,22,24,26,28,32,64,128,256])
-Generate("fonfMedium.","bdf")
+Generate("fonf.","bdf")
