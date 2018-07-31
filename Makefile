@@ -1,7 +1,7 @@
 all: fonf.ttf
 
 fonf.ttf:
-	fonttosfont -o fonf.ttf -- *.bdf
+	fonttosfnt -o fonf.ttf -- *-*.bdf
 
 clean:
 	rm *.bdf
